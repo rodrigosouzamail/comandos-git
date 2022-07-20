@@ -1,0 +1,115 @@
+git --version verifica a versão do git instalado.
+
+git config --global user.name "nome do usuário sem aspas"
+git config --global user.email "email do usuário sem aspas"
+
+
+
+git init
+
+git status compara os arquivos do working área com os arquivos do repositório git e informa se tem alterações aguardando para serem adicionadas no stage área.
+
+git branch "nome da branch sem aspas"
+
+git checkout lista todasa as branchs
+
+git checkout "nome da branch sem aspas acessa a branch"
+
+git add ('nome do arquivo')adiciona conteúdo não gerenciado ao stage, git add . ('adiciona todos os arquivos na stage').
+
+git rm --cached "nome do arquivo sem aspas" remove os arquivos do stage, arquivos que foram adicionados no comando anterior.
+
+git commit -m "Mensagem resumo da alteração"
+
+git log "Nome do arquivo" Lista todo o histórico de alterações 
+
+git log "Mostra o histórico de todos os arquivos"
+
+
+
+### COMANDOS PARA TRABALHAR EM EQUIPE REPOSITÓRIO REMOTO####
+
+O cenário mais comum é uma equipe ter um repositório remoto ao qual todos têm acesso para enviar seus commits.
+Nesse caso, antes de começar a desenvolver, é necessário baixar o repositório remoto e isso é feito com o comando git clone <caminho_para_o_repositório>.
+
+
+
+git clone git://github.com/meurepoexemplo/meusite.git Realiza o clone de um repositório remoto para local
+
+git fetch busca alterações no repositório remoto e trás para o repositório local
+
+git branch "nome da branch sem aspas" lista  git branch -r
+
+git fetch atualiza os branches locais
+
+git pull para buscar alterações de um repositório remoto
+
+git push envia as alterações para o respositório remoto Para verificar as alterações que foram enviadas ao repositório pode-se utilizar o parâmetro "--dry-run" no comando
+
+
+### CRIANDO BRANCH ###
+git checkout NovoBranch Define como principal o branch de trabalho.
+git checkout -b <nome_do_novo_branch> Cria um novo branch e já define como principal.
+
+### FAZENDO O MERGE ###
+
+git merge <nome_do_branch> junta todas as alterações dos branchs no branch que foi passado o nome
+
+O merge de um branch paralelo com o principal geralmente é devido a inclusão de uma funcionalidade ou correção de um bug, desse modo é recomendado
+criar um ponto de release, ou seja, uma marcação indicando a versão do software a partir daquele commit, chamada de tag, e sua criação é feita com o comando git tag <nome_da_tag> <identificador_do_commit>
+
+
+EX
+git tag 1.0.0 a98668ab880ba9059cf587de851b989f09c71fbb
+
+### COMPARANDO ARQUIVOS ###
+
+git diff Compara a diferença entre todos os arquivos do diretório de trabalho working área e o repositório do git.
+
+git diff nomeDoArquivo. compara a diferença entre o arquivo selecionado no diretório de trabalho working área e o repositório do git.
+
+git diff --staged compara a diferença entre os arquivos presentes no diretório de trabalho working área e os arquivos presentes na stage area.
+
+
+### REMOVENDO ARQUIVOS###
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
