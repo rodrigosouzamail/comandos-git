@@ -25,10 +25,13 @@ git rm --cached "nome do arquivo sem aspas" remove os arquivos do stage, arquivo
 
 git commit -m "Mensagem resumo da alteração"
 
+git commit -am "Mensagem" Esse comando adiciona todos os arquivos dentro da staged area e já realiza o commit as duas funções em uma só.
+
 git log "Nome do arquivo" Lista todo o histórico de alterações 
 
 git log "Mostra o histórico de todos os arquivos"
 git log -p Mostra de forma detralhada a diferença que a revisão criou
+git log --oneline Mostra de forma resumida um commit por linha (resumo)
 git log --after='5 hours' Mostra os commits das últimas cinco horas.
 git log --before="5 hours" -1 Pula as últimas cinco horas e visualiza apenas os mais antigos. O -1 exibe apenas um commit
 Outras opções que o Git também aceita são: --since="24 hours", --since="1 minute" e --before="2008-10.01".
@@ -58,6 +61,13 @@ git push envia as alterações para o respositório remoto Para verificar as alt
 git checkout NovoBranch Define como principal o branch de trabalho.
 git checkout -b <nome_do_novo_branch> Cria um novo branch e já define como principal.
 
+### ALTERNANDO ENTRE BRANCHS ###
+
+Para alternar entre as branchs o diretório deve estar limpo com os commits necessários realizados.
+
+git show HEAD Exibe quais foram as alterações feitas dentro do último commit
+git log --graph --oneline --decorate --all Combinando esses comandos exibimos em uma linha para onde os ponteiros HEAD de cada branch está apontando.
+
 ### FAZENDO O MERGE ###
 
 git merge <nome_do_branch> junta todas as alterações dos branchs no branch que foi passado o nome
@@ -81,14 +91,11 @@ git diff -- cached visualiza as diferenças entre o staging area e o repositóri
 git diff HEAD visualiza as diferenças entre o working área e stage com oque está no repositório basta utilizar o HEAD O HEAD é uma palavra chave
 que se refere ao commit mais recente no branch que estamos atualmente.
 git diff "18f822e Número do commit" Visualiza de forma detalhada a alteração nos arquivos no commit informado pelo código/número do commit
-git diff --stat 1.0 Exibe uma estatística resumida de quantas linhas foram adicionadas em cada arquivo.
+git diff --stat Exibe uma estatística resumida de quantas linhas foram adicionadas em cada arquivo.
 
 git branch -d Test_B A opção -d excluirá o branch somente se você já fez o push e o merge com o branch remoto.
 
 git branch -D Test_B Use a opção -D em vez disso se quiser forçar a exclusão do branch, mesmo que você ainda não tenha feito o push e o merge com ele.
-
-
-
 
 
 
@@ -98,6 +105,15 @@ git branch -m master meubranchmaster  O branch master foi renomeado para meubran
 Os outros dois parâmetros são: o nome do branch antigo seguido pelo nome do novo branch.
 
 
+
+### EXIBINDO O SH1 ###
+
+cat .git/HEAD Retorna para onde o ponteiro está apontando
+cat .git/refs/heads/master Retorna o SH1 do último commit realizado, onde o ponteiro HEAD está apontando.
+
+### REMOVENDO BRANCH###
+
+  
 
 
 
