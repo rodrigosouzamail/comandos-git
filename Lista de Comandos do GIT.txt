@@ -9,15 +9,16 @@ git init
 
 git status compara os arquivos do working área com os arquivos do repositório git e informa se tem alterações aguardando para serem adicionadas no stage área.
 
-git branch Lista o nome de todas as branchs pesentes no repositório
+git branch Lista o nome de todas as branchs pesentes no repositório.
 
-git branch "nome da branch sem aspas" Cria uma nova branch
+git branch "nome da branch sem aspas" Cria uma nova branch.
 
-git checkout lista todasa as branchs
+git checkout -b "nome da nova branch sem aspas" "nome de onde o branche deve ser criado "master" sem aspas" esse comando cria o novo branch e já faz o checkout para ele.
 
 git checkout "nome da branch sem aspas acessa a branch"
 
 git add ('nome do arquivo')adiciona conteúdo não gerenciado ao stage, git add . ('adiciona todos os arquivos na stage').
+
 git add -i Abre um menu interativo para selecionar oque podemos fazer com os arquivos.
 
 git rm --cached "nome do arquivo sem aspas" remove os arquivos do stage, arquivos que foram adicionados no comando anterior.
