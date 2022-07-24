@@ -81,7 +81,7 @@ git diff -- cached visualiza as diferenças entre o staging area e o repositóri
 git diff HEAD visualiza as diferenças entre o working área e stage com oque está no repositório basta utilizar o HEAD O HEAD é uma palavra chave
 que se refere ao commit mais recente no branch que estamos atualmente.
 git diff "18f822e Número do commit" Visualiza de forma detalhada a alteração nos arquivos no commit informado pelo código/número do commit
-git diff --stat Exibe uma estatística resumida de quantas linhas foram adicionadas em cada arquivo.
+git diff --stat 1.0 Exibe uma estatística resumida de quantas linhas foram adicionadas em cada arquivo.
 
 git branch -d Test_B A opção -d excluirá o branch somente se você já fez o push e o merge com o branch remoto.
 
@@ -96,6 +96,12 @@ git branch -D Test_B Use a opção -D em vez disso se quiser forçar a exclusão
 
 git branch -m master meubranchmaster  O branch master foi renomeado para meubranchmaster. O parâmetro -m no primeiro comando solicita ao Git a execução da operação de renomeação.
 Os outros dois parâmetros são: o nome do branch antigo seguido pelo nome do novo branch.
+
+
+
+
+
+
 
 
 
