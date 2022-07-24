@@ -9,13 +9,16 @@ git init
 
 git status compara os arquivos do working área com os arquivos do repositório git e informa se tem alterações aguardando para serem adicionadas no stage área.
 
-git branch "nome da branch sem aspas"
+git branch Lista o nome de todas as branchs pesentes no repositório
+
+git branch "nome da branch sem aspas" Cria uma nova branch
 
 git checkout lista todasa as branchs
 
 git checkout "nome da branch sem aspas acessa a branch"
 
 git add ('nome do arquivo')adiciona conteúdo não gerenciado ao stage, git add . ('adiciona todos os arquivos na stage').
+git add -i Abre um menu interativo para selecionar oque podemos fazer com os arquivos.
 
 git rm --cached "nome do arquivo sem aspas" remove os arquivos do stage, arquivos que foram adicionados no comando anterior.
 
@@ -62,6 +65,7 @@ criar um ponto de release, ou seja, uma marcação indicando a versão do softwa
 EX
 git tag 1.0.0 a98668ab880ba9059cf587de851b989f09c71fbb
 
+
 ### COMPARANDO ARQUIVOS ###
 
 git diff Compara a diferença entre todos os arquivos do diretório de trabalho working área e o repositório do git.
@@ -69,8 +73,9 @@ git diff Compara a diferença entre todos os arquivos do diretório de trabalho 
 git diff nomeDoArquivo. compara a diferença entre o arquivo selecionado no diretório de trabalho working área e o repositório do git.
 
 git diff --staged compara a diferença entre os arquivos presentes no diretório de trabalho working área e os arquivos presentes na stage area.
-
-
+git diff -- cached visualiza as diferenças entre o staging area e o repositório basta utilizar o parâmetro --cached na chamada
+git diff HEAD visualiza as diferenças entre o working área e stage com oque está no repositório basta utilizar o HEAD O HEAD é uma palavra chave
+que se refere ao commit mais recente no branch que estamos atualmente.
 
 git branch -d Test_B A opção -d excluirá o branch somente se você já fez o push e o merge com o branch remoto.
 
@@ -79,13 +84,12 @@ git branch -D Test_B Use a opção -D em vez disso se quiser forçar a exclusão
 
 
 
-### REMOVENDO ARQUIVOS###
 
 
+### RENOMEANDO BRANCH###
 
-
-
-
+git branch -m master meubranchmaster  O branch master foi renomeado para meubranchmaster. O parâmetro -m no primeiro comando solicita ao Git a execução da operação de renomeação.
+Os outros dois parâmetros são: o nome do branch antigo seguido pelo nome do novo branch.
 
 
 
