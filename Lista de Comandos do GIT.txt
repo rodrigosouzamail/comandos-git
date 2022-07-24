@@ -71,6 +71,14 @@ git diff nomeDoArquivo. compara a diferença entre o arquivo selecionado no dire
 git diff --staged compara a diferença entre os arquivos presentes no diretório de trabalho working área e os arquivos presentes na stage area.
 
 
+
+git branch -d Test_B A opção -d excluirá o branch somente se você já fez o push e o merge com o branch remoto.
+
+git branch -D Test_B Use a opção -D em vez disso se quiser forçar a exclusão do branch, mesmo que você ainda não tenha feito o push e o merge com ele.
+
+
+
+
 ### REMOVENDO ARQUIVOS###
 
 
