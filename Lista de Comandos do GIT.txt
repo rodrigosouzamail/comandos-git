@@ -113,15 +113,31 @@ cat .git/refs/heads/master Retorna o SH1 do último commit realizado, onde o pon
 
 ### REMOVENDO BRANCH###
 
-  
+
+
+### TRABALHANDO COM REPOSITORIOS REMOTOS ###
+
+
+git remote Exibe se temos algum repositório remoto conectado com o projeto.
+
+git remote -v Exibe os links de fetch e push do repositorio ou dos reposositorios.
+
+git remote add origin Link do repositório git
+
+cat .git/config Exibe o arquivo .git/config para conferir se as configurações foram listadas de maneira correta.
+
+git remote rm origin Remove o repositório
+
+
+
+Enviando arquivos para o repositório remoto
+
+git push -g origin master
 
 
 
 
-
-
-
-
+testando
 
 
 
